@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="image_movie">Image movie</string>
+    <string name="image_detail_post_movie">Image detail post movie</string>
+</resources>

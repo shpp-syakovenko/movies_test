@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/listMovies">
+
+    <fragment
+        android:id="@+id/listMovies"
+        android:name="com.serlife.movies.ui.list_movies.ListMovies"
+        android:label="ListMovies" />
+    <fragment
+        android:id="@+id/detailMovie"
+        android:name="com.serlife.movies.ui.detail_movie.DetailMovie"
+        android:label="DetailMovie" />
+</navigation>
