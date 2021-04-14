@@ -1,4 +1,4 @@
-package com.serlife.movies.ui.detail_movie
+package com.serlife.movies.ui.movie.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.serlife.movies.databinding.DetailMovieBinding
 
-class DetailMovie : Fragment() {
+class DetailMovieFragment : Fragment() {
     private lateinit var binding: DetailMovieBinding
 
     override fun onCreateView(

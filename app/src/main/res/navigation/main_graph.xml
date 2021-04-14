@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/listMovies">
+    app:startDestination="@id/listMoviesFragment">
 
     <fragment
-        android:id="@+id/listMovies"
-        android:name="com.serlife.movies.ui.list_movies.ListMovies"
-        android:label="ListMovies" />
+        android:id="@+id/listMoviesFragment"
+        android:name="com.serlife.movies.ui.movie.feed.ListMoviesFragment"
+        tools:layout="@layout/list_movies">
+
+        <action
+            android:id="@+id/actionDetailMovieFragment"
+            app:destination="@id/detailMovieFragment" />
+
+    </fragment>
+
     <fragment
-        android:id="@+id/detailMovie"
-        android:name="com.serlife.movies.ui.detail_movie.DetailMovie"
-        android:label="DetailMovie" />
+        android:id="@+id/detailMovieFragment"
+        android:name="com.serlife.movies.ui.movie.detail.DetailMovieFragment"
+        tools:layout="@layout/detail_movie">
+
+        <argument
+            android:name="movie"
+            app:argType="com.serlife.movies.data.entity.Movie" />
+
+    </fragment>
 </navigation>

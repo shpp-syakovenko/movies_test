@@ -1,4 +1,4 @@
-package com.serlife.movies.ui.list_movies
+package com.serlife.movies.ui.movie.feed
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -9,8 +9,8 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class ListMoviesViewModal : ViewModel() {
-    private val repositoryMovies = MoviesRepository()
+class ListMoviesViewModal(private val repositoryMovies: MoviesRepository) : ViewModel() {
+
     var movies = MutableLiveData<List<Movie>>()
     private val compositeDisposable = CompositeDisposable()
 

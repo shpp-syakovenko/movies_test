@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="movie"
+        type="com.serlife.movies.data.entity.Movie" />
+</data>
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivPoster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        app:image="@{movie.fullImage}"
         android:contentDescription="@string/image_movie"/>
 </layout>
