@@ -2,6 +2,7 @@ package com.serlife.movies.data.api
 
 import com.serlife.movies.data.api.response.MoviesResponse
 import io.reactivex.rxjava3.core.Observable
+import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query
 

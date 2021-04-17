@@ -19,6 +19,14 @@ class ListMoviesViewModal(private val repositoryMovies: MoviesRepository) : View
     }
 
     private fun loadData() {
+
+        // add coroutine
+
+
+
+
+
+
         compositeDisposable.add(
             repositoryMovies.getMoviesList(1)
                 .subscribeOn(Schedulers.io())
