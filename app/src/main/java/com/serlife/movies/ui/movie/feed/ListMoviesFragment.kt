@@ -28,7 +28,6 @@ class ListMoviesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         return ListMoviesBinding.inflate(inflater).also { binding = it }.root
     }
 
@@ -41,7 +40,7 @@ class ListMoviesFragment : Fragment() {
         binding.rvListMovie.adapter = MoviesAdapter()
 
         binding.rvListMovie.addOnScrollListener(ScrollMoreListener(SCROLL_DIRECTION_BOTTOM) {
-
+            viewModel.loadData(false)
         })
 
         adapter.eventHolder = MovieEventHolder().apply {
